@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ============================================
-# All variables and arrays defined at the top
+# Define the variables and the array 
 # ============================================
 
 file_name="./health_report.txt"
@@ -18,13 +18,13 @@ log_file="./app.log"
 
 
 # ============================================
-# All functions defined here
+# functions defined here
 # ============================================
 
 # Part 1
 check_health() {
     touch $file_name 
-    cpu_usage=$(top -bn1 | grep "Cpu") # batch mode (-b) n1 means run onlu one time
+    cpu_usage=$(top -bn1 | grep "Cpu") # batch mode (-b) n1 means run only one time
 
 mem_usage=$(free -h | grep "Mem" | awk '{print$3}')
 
@@ -46,9 +46,10 @@ install_tool() {
     local tool=$1
 
         echo "$tool is not installed ...installing $tool"
-
+        # using conditionals to check the os 
         if [[ "$(uname)" == "Darwin" ]];
         then
+              # install the $tool in the macos
                 brew install $tool
 
         elif [[ "$(uname)" == "Linux" ]];
@@ -155,11 +156,14 @@ generate_report() {
 }
 
 # ============================================
-# Main program — just function calls
+# Main program 
 # ============================================
+
+# calling the function to execute part1
 
 check_health
 
+# using loop to itrate thorugh the tools 
 
 for tool in ${tools[@]}
 do
