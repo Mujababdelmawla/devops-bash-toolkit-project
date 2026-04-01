@@ -1,0 +1,4 @@
+the report generated at : Wed Apr  1 04:18:41 UTC 2026
+the cpu usage is : %Cpu(s):  0.0 us,  0.6 sy,  0.0 ni, 97.0 id,  2.4 wa,  0.0 hi,  0.0 si,  0.0 st 
+the memory usage is : 2.1Gi
+the disk space is : /dev/sdd       1007G  9.6G  947G   1% /

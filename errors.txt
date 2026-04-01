@@ -1,0 +1,3 @@
+2024-01-01 08:05:00 ERROR database connection failed
+2024-01-01 08:20:00 ERROR disk space running low
+2024-01-01 08:35:00 ERROR memory usage critical
